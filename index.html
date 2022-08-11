@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="heading">
+        <h1 class="title">Redactr</h1>
+
+        
+           <div class="btn-box">
+
+            <button id="redactBtn" class="btn">
+                <i class="fa-solid fa-eye-slash"></i>
+                Redact
+            </button>
+
+            <button class="btn btn--clear">
+                <i class="fa-solid fa-trash icons"></i>
+                clear
+            </button>
+           </div>
+        </div>
+        <form action="" id="msgForm">
+            <label for="msg" class="msgLabel">
+                <textarea name="message" id="msg" cols="30" rows="10" placeholder="Please type/paste message"></textarea>
+            </label>
+    
+        </form>
+    
+        <form action="" id="keywordForm">
+            
+            <label for="keyword" class="keywordLabel">
+                <input type="text" id="keyword" placeholder="Type in keywords">
+            </label>
+
+            <label for="substitute" class="substituteLabel">
+                <input type="text" id="substitute" placeholder="Type in character / word to be used for redact">
+            </label>
+
+            
+        </form>
+    
+        <form action="" id="resultForm">
+            <label for="" class="displayBoxLabel">
+                <textarea name="result" class="displayBox" readonly id="resultBox" cols="30" rows="10"></textarea>
+            </label>
+        </form>
+
+
+
+        <div class="notification hidden btn--clear">
+            Message and keyword input should not be empty
+            <!-- <i class="fa-solid fa-xmark notification-icon"></i> -->
+        </div>
+
+        <div class="status">
+            <div class="word-count stat">Number of words: <span class="stat-word-count">0</span></div>
+            <div class="match-count stat">Words Matched: <span class="stat-match-count">0</span></div>
+            <div class="timer stat">Execution time: <span class="stat-timer">0ms</span></div>
+        </div>
+        
+
+    </div>
+   
+
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
