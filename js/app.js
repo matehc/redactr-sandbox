@@ -112,8 +112,10 @@ let redactNow = (msgText, wordsToSearchAndReplace, characterForWordRedaction) =>
     
  
       msgKeywordMatch = msgText.match(regexp).length;
+
+      let redacted = (characterForWordRedaction.length < 3) ? msgText.replace(regexp, characterForWordRedaction.repeat(word.length)): msgText.replace(regexp, characterForWordRedaction);
         
-      redactedText = msgText.replace(regexp, characterForWordRedaction.repeat(word.length));
+      redactedText = redacted;
     })
 
     const duration = (Date.now() - startExecutionTime) / 1000;
